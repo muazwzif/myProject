@@ -1,0 +1,12 @@
+
+    Weather Data:
+    - Location: Sungai Besar, Selangor, Malaysia
+    - Temperature: 30.5°C
+    - Feels Like: 34.5°C
+    - Condition: Patchy rain nearby
+    - Wind Speed: 13.3 kph
+    - Humidity: 63%
+
+    Itinerary Details:
+    Melawat saudara mara
+    
