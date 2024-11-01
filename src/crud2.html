@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Itineraries</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header class="navbar">
+        <a href="index.html" class="nav-brand">Traveller Advisories</a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="crud2.html">Manage Itineraries</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content for Managing Itineraries -->
+    <main class="container">
+        <h1>📁 Manage Your Itineraries</h1>
+        <p>Click on a file to view or edit its details.</p>
+
+        <!-- Display Section for Saved Itineraries -->
+        <div id="itineraryDisplay" class="itinerary-display">
+            <!-- Created files will display here -->
+        </div>
+
+         <!-- Placeholder for Displaying Full Itinerary and Weather on "Read" -->
+         <div id="fileContentDisplay" class="file-content-display" style="display: none;">
+            <div class="weather-info-section">
+                <h3>Weather Information</h3>
+                <p id="weatherLocation" class="weather-details"></p>
+                <p id="weatherTemperature" class="weather-details"></p>
+                <p id="weatherFeelsLike" class="weather-details"></p>
+                <p id="weatherDescription" class="weather-details"></p>
+                <p id="weatherWind" class="weather-details"></p>
+                <p id="weatherHumidity" class="weather-details"></p>
+            </div>
+
+            <div class="itinerary-info-section">
+                <h3>Itinerary Details</h3>
+                <textarea id="displayItineraryData" class="input-field textarea" rows="5" readonly></textarea>
+            </div>
+
+            <!-- Update, Confirm Update, Cancel Update, and Delete Buttons -->
+            <div class="button-group">
+                <button type="button" id="btnUpdate" class="btn update-btn">Update</button>
+                <button type="button" id="btnDelete" class="btn delete-btn">Delete</button>
+                <button type="button" id="btnConfirmUpdate" class="btn confirm-update-btn" style="display: none;">Confirm Update</button>
+                <button type="button" id="btnCancelUpdate" class="btn cancel-update-btn" style="display: none;">Cancel Update</button>
+            </div>
+        </div>
+
+        <!-- Delete Confirmation Dialog -->
+        <div id="deleteConfirmation" class="delete-confirmation" style="display: none;">
+            <p>Are you sure you want to delete "<span id="fileNameToDelete"></span>"?</p>
+            <button type="button" id="btnYesDelete" class="btn yes-btn">Yes</button>
+            <button type="button" id="btnNoDelete" class="btn no-btn">No</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 Traveller Advisories. All rights reserved.</p>
+    </footer>
+
+    <script src="crud2.js"></script>
+</body>
+</html>

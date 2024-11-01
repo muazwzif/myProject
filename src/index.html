@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traveller Advisories - Weather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header class="navbar">
+        <a href="index.html" class="nav-brand">Traveller Advisories</a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="crud2.html">Manage Itineraries</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content for Weather Information -->
+    <main class="container">
+        <h1>🌍 Travel Weather Advisory</h1>
+        <p>Get real-time weather updates, full-day hourly forecast, and clothing recommendations!</p>
+
+        <div class="input-container">
+            <input type="text" id="city_input" placeholder="Enter a City (e.g., London, Tokyo)" class="input-field">
+            <button class="btn" onclick="buttonClicked()">Get Weather</button>
+        </div>
+
+        <!-- Current Weather Information -->
+        <div id="currentWeather" class="weather-current">
+            <h2>Current Weather</h2>
+            <div class="current-weather-info">
+                <p><img id="currentIcon" class="current-weather-icon" src=""></p>
+                <p id="location" class="weather-details"></p>
+                <p id="localTime" class="weather-details"></p>
+                <p id="temperature" class="weather-details"></p>
+                <p id="feelsLike" class="weather-details"></p>
+                <p id="description" class="weather-details"></p>
+                <p id="wind" class="weather-details"></p>
+                <p id="humidity" class="weather-details"></p>
+                <p id="clothingAdvice" class="weather-details clothing-advice"></p>
+            </div>
+        </div>
+
+        <!-- Hourly Forecast Section -->
+        <div id="hourlyForecast" class="weather-hourly">
+            <h2>Hourly Forecast</h2>
+            <div id="hourlyContainer" class="hourly-container">
+                <!-- Hourly forecast will be dynamically inserted here -->
+            </div>
+        </div>
+
+        <!-- Button to navigate to Create Itinerary Page -->
+        <div class="button-group">
+            <button class="btn" onclick="navigateToCreatePage()">Create Itinerary</button>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 Traveller Advisories. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

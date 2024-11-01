@@ -1,0 +1,461 @@
+/* Reset and General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: url('backwheater.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: rgba(51, 51, 51, 0.9);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-brand {
+    font-size: 26px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #84fab0;
+}
+
+/* Main Container Styling */
+.container {
+    flex: 1;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+/* Header Styling */
+h1 {
+    font-size: 34px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* Input and Button Styling */
+.input-container {
+    margin-bottom: 20px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #84fab0;
+    border-radius: 10px;
+    outline: #96e6a1;
+    transition: border-color 0.3s;
+}
+
+.input-field:focus {
+    border-color: #8fd3f4;
+}
+
+/* Button Styling */
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #090909;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #357ABD;
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.create-btn {
+  background-color: #28a745;
+}
+
+.read-btn {
+  background-color: #17a2b8;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.update-btn {
+  background-color: #ffc107;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+}
+
+.update-btn, .delete-btn {
+  display: inline;
+  margin-top: 10px;
+}
+
+/* Confirm Update Button Styling */
+.confirm-update-btn {
+  background-color: #28a745;
+  display: none;
+}
+
+.confirm-update-btn:hover {
+  background-color: #218838;
+}
+
+/* Cancel Update Button Styling */
+.cancel-update-btn {
+  background-color: #ffc107;
+  color: #333;
+  display: none;
+}
+
+.cancel-update-btn:hover {
+  background-color: #e0a800;
+}
+
+/* Delete Confirmation Dialog */
+.delete-confirmation {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  text-align: center;
+}
+
+.delete-confirmation p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.yes-btn {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.yes-btn:hover {
+  background-color: #c82333;
+}
+
+.no-btn {
+  background-color: #17a2b8;
+  color: #fff;
+}
+
+.no-btn:hover {
+  background-color: #138496;
+}
+
+.file-content-display {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Weather Information Styling */
+.weather-current, .weather-hourly {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.weather-current h2, .weather-hourly h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.weather-details {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #444;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.clothing-advice {
+    font-size: 16px;
+    color: #4A90E2;
+    background-color: #eef8ff;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+/* Current Weather Icon */
+.current-weather-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+/* Hourly Forecast (Horizontal Scroll) */
+.hourly-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 10px 0;
+    scrollbar-width: thin;
+    scrollbar-color: #2595eb #ffffff;
+}
+
+.hourly-box {
+    background-color: #ffffff;
+    padding: 10px;
+    min-width: 80px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.hourly-time {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.hourly-icon {
+    width: 40px;
+    height: 40px;
+    margin: 5px 0;
+}
+
+.hourly-temp {
+    font-size: 14px;
+    color: #333;
+}
+
+.hourly-condition {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Itinerary Display Section */
+.itinerary-display {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.itinerary-display h3 {
+  font-size: 20px;
+  color: #4A90E2;
+  margin-bottom: 10px;
+}
+
+.itinerary-display p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.file-box {
+  font-size: 18px;
+  color: #333;
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s, box-shadow 0.3s;
+  position: relative;
+  cursor: pointer;
+}
+
+.file-box:hover {
+  background-color: #e7f3ff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual Itinerary Card */
+.itinerary-box {
+  background-color: #ffffff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.itinerary-box:hover {
+  background-color: #f7f7f7;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.itinerary-box h3 {
+  font-size: 18px;
+  color: #4A90E2;
+  margin-bottom: 5px;
+}
+
+.itinerary-box p {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Weather Display Box Styling */
+.weather-display-box {
+  background-color: #eef8ff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.weather-display-box h2 {
+  font-size: 20px;
+  color: #4A90E2;
+  margin-bottom: 10px;
+}
+
+.weather-display-box p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Itinerary Form Styling */
+.itinerary-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.itinerary-form h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Styling for Weather Information Section */
+.weather-info-section, .itinerary-info-section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.weather-info-section h3, .itinerary-info-section h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.form-group label {
+  font-size: 16px;
+  color: #555;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Textarea */
+.textarea {
+  width: 50%;
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  border: 2px solid #84fab0;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+  resize: none;
+}
+
+.textarea:focus {
+  border-color: #8fd3f4;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    width: 100%;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: auto;
+    position: relative;
+}
+

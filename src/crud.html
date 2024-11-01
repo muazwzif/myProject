@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Itinerary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header class="navbar">
+        <a href="index.html" class="nav-brand">Traveller Advisories</a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="crud2.html">Manage Itineraries</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content for Creating Itinerary -->
+    <main class="container">
+        <h1>📅 Create a New Itinerary</h1>
+        <p>Create a new itinerary with weather-based recommendations!</p>
+
+        <!-- Weather Data Display Box -->
+        <div class="weather-display-box">
+            <h2>Weather Data</h2>
+            <p id="weatherLocation"></p>
+            <p id="weatherTemperature"></p>
+            <p id="weatherFeelsLike"></p>
+            <p id="weatherDescription"></p>
+            <p id="weatherWind"></p>
+            <p id="weatherHumidity"></p>
+        </div>
+
+        <!-- Itinerary Form Card -->
+        <div class="itinerary-form">
+            <h3>Add a New Itinerary</h3>
+            <form class="form">
+                <!-- Itinerary Name Input -->
+                <div class="form-group">
+                    <label for="fileName">Itinerary Name</label>
+                    <input id="fileName" type="text" class="input-field" placeholder="Enter itinerary name">
+                </div>
+
+                <!-- Itinerary Details Textarea -->
+                <div class="form-group">
+                    <label for="fileContents">Itinerary Details</label>
+                    <textarea id="fileContents" class="input-field textarea" rows="5" placeholder="Enter activities and weather conditions"></textarea>
+                </div>
+
+                <!-- Create Button -->
+                <div class="button-group">
+                    <button type="button" id="btnCreate" class="btn create-btn">Create</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Button to View All Itineraries - Appears After Creation -->
+        <div class="button-group" id="viewAllButtonContainer" style="display: none;">
+            <button class="btn view-all-btn" onclick="goToManagePage()">View All Itineraries</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 Traveller Advisories. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("weatherLocation").textContent = `Location: ${localStorage.getItem("location")}`;
+            document.getElementById("weatherTemperature").textContent = `Temperature: ${localStorage.getItem("temperature")}`;
+            document.getElementById("weatherFeelsLike").textContent = `Feels Like: ${localStorage.getItem("feelsLike")}`;
+            document.getElementById("weatherDescription").textContent = `Condition: ${localStorage.getItem("description")}`;
+            document.getElementById("weatherWind").textContent = `Wind: ${localStorage.getItem("wind")}`;
+            document.getElementById("weatherHumidity").textContent = `Humidity: ${localStorage.getItem("humidity")}`;
+        });
+    </script>
+
+    <script src="crud.js"></script>
+</body>
+</html>
