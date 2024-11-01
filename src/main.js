@@ -9,7 +9,10 @@ function buttonClicked() {
             storeWeatherData(data);
 
             // Display hourly forecast
-            displayHourlyForecast(data.forecast.forecastday[0].hour);
+            displayHourlyForecast(data.forecast.forecastday[0].hour)
+            
+            document.getElementById("weatherInfo").style.display = "block";
+
         })
         .catch(error => {
             console.error("Error fetching data:", error);

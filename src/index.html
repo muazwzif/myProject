@@ -18,45 +18,47 @@
         </nav>
     </header>
 
-    <!-- Main Content for Weather Information -->
+    <!-- Main Input Section -->
     <main class="container">
         <h1>🌍 Travel Weather Advisory</h1>
-        <p>Get real-time weather updates, full-day hourly forecast, and clothing recommendations!</p>
+        <p>Enter a city to see real-time weather updates and advice!</p>
 
         <div class="input-container">
             <input type="text" id="city_input" placeholder="Enter a City (e.g., London, Tokyo)" class="input-field">
             <button class="btn" onclick="buttonClicked()">Get Weather</button>
         </div>
 
-        <!-- Current Weather Information -->
-        <div id="currentWeather" class="weather-current">
-            <h2>Current Weather</h2>
-            <div class="current-weather-info">
-                <p><img id="currentIcon" class="current-weather-icon" src=""></p>
-                <p id="location" class="weather-details"></p>
-                <p id="localTime" class="weather-details"></p>
-                <p id="temperature" class="weather-details"></p>
-                <p id="feelsLike" class="weather-details"></p>
-                <p id="description" class="weather-details"></p>
-                <p id="wind" class="weather-details"></p>
-                <p id="humidity" class="weather-details"></p>
-                <p id="clothingAdvice" class="weather-details clothing-advice"></p>
+        <!-- Weather Information Section (hidden initially) -->
+        <div id="weatherInfo" class="weather-info" style="display: none;">
+            <!-- Current Weather Information -->
+            <div id="currentWeather" class="weather-current">
+                <h2>Current Weather</h2>
+                <div class="current-weather-info">
+                    <p><img id="currentIcon" class="current-weather-icon" src=""></p>
+                    <p id="location" class="weather-details"></p>
+                    <p id="localTime" class="weather-details"></p>
+                    <p id="temperature" class="weather-details"></p>
+                    <p id="feelsLike" class="weather-details"></p>
+                    <p id="description" class="weather-details"></p>
+                    <p id="wind" class="weather-details"></p>
+                    <p id="humidity" class="weather-details"></p>
+                    <p id="clothingAdvice" class="weather-details clothing-advice"></p>
+                </div>
+            </div>
+
+            <!-- Hourly Forecast Section -->
+            <div id="hourlyForecast" class="weather-hourly">
+                <h2>Hourly Forecast</h2>
+                <div id="hourlyContainer" class="hourly-container">
+                    <!-- Hourly forecast will be dynamically inserted here -->
+                </div>
+            </div>
+
+            <!-- Button to navigate to Create Itinerary Page -->
+            <div class="button-group">
+                <button class="btn" onclick="navigateToCreatePage()">Create Itinerary</button>
             </div>
         </div>
-
-        <!-- Hourly Forecast Section -->
-        <div id="hourlyForecast" class="weather-hourly">
-            <h2>Hourly Forecast</h2>
-            <div id="hourlyContainer" class="hourly-container">
-                <!-- Hourly forecast will be dynamically inserted here -->
-            </div>
-        </div>
-
-        <!-- Button to navigate to Create Itinerary Page -->
-        <div class="button-group">
-            <button class="btn" onclick="navigateToCreatePage()">Create Itinerary</button>
-        </div>
-
     </main>
 
     <!-- Footer -->
